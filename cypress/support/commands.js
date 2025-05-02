@@ -23,6 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('login', (url, validUsername, validPassword) => {
+    cy.visit(url);
+    cy.get("#user-name").should('exist');
+    cy.get("#user-name").type(validUsername).should("have.value", validUsername);
+    cy.log("Entered Username successfully");
+    cy.get("#password").should("exist");
+    cy.get("#password").type(validPassword).should("have.value", validPassword);
+    cy.log("Entered Password successfully");
+    cy.get("#login-button").should("exist");
+    cy.get("#login-button").click();
+    cy.url().should("include", "/inventory.html");
+    cy.log("Logged in successfully");
+})
 Cypress.on('window:alert', (buttonText) => {
     return false; //clicks on cancel 
 });

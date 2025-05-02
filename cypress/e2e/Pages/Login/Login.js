@@ -49,6 +49,10 @@ class Login
     clickLoginButton() {
         cy.get("#login-button").click();
     }
+    validateLoginSuccesfully()
+    {
+        cy.url().should("include", "/inventory.html");
+    }
     clickLogoutButton() {
         cy.wait(3000)
         cy.get("#react-burger-menu-btn").click();

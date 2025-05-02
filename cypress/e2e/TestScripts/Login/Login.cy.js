@@ -71,6 +71,7 @@ describe('Entity Login test suite', () => {
         login.enterPassword(validPassword);
         login.validateLoginButton();
         login.clickLoginButton();
+        login.validateLoginSuccesfully()
     })
     it("Verify the Logout of user.", () => {
         login.validateUsernameField();
