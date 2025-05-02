@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 import Home from "../../Pages/Home/Home";
-describe('Entity Login test suite', () => {
+describe('Home test suite', () => {
     const home = new Home();
     let url;
     let validUsername;

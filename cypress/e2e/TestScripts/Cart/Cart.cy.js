@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 import Cart from "../../Pages/Cart/Cart"; 
 import Home from "../../Pages/Home/Home";
-describe('Entity Login test suite', () => {
+describe('Cart test suite', () => {
     const home = new Home();
     const cart = new Cart();
     let url;
@@ -22,10 +22,10 @@ describe('Entity Login test suite', () => {
         home.validateCartCount()
         home.clickCartIcon()
     })
-    it("Verify if user is able to see  home page.", () => {
+    it("Verify if user is able to see  CArt page.", () => {
         cart.verifyCartPage();
     })
-    it("Verify UI Elements of Home Page", () => {
+    it("Verify UI Elements of Cart Page", () => {
         cart.validateHeading();
         cart.validateSideHeading();
         cart.validateInventoryItem(item);

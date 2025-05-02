@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 import Login from "../../Pages/Login/Login";
-describe('Entity Login test suite', () => {
+describe('Login test suite', () => {
     const login = new Login();
     let url;
     let emptyUsername;
